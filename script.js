@@ -32,20 +32,20 @@ const questions = [
     question:
       "What event marked the beginning of the Great Depression in the United States?",
     answers: [
-      { value: "The Great Pyramid of Giza", correct: "true" },
-      { value: "Great Sphinx of Giza", correct: "false" },
+      { value: "Stock market crash", correct: "false" },
+      { value: "Farming In 1935", correct: "false" },
       { value: "The Wall Street Crash of 1929", correct: "true" },
-      { value: "Karnak", correct: "false" },
+      { value: "The New Deal", correct: "false" },
     ],
   },
   {
     question:
       "Which river is the longest in the world?",
     answers: [
-      { value: "The Great Pyramid of Giza", correct: "true" },
-      { value: "Great Sphinx of Giza", correct: "false" },
+      { value: "Amazon River", correct: "false" },
+      { value: "Mississippi River", correct: "false" },
       { value: "The Nile River", correct: "true" },
-      { value: "Karnak", correct: "false" },
+      { value: "Mekong River", correct: "false" },
     ],
   },
 ];
