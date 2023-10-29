@@ -29,14 +29,7 @@ To use this Quiz App , follow these steps:
    ```shell
    git clone https://github.com/your-username/quiz-app.git
    ```
-
-2. Navigate to the project directory:
-
-   ```shell
-   cd quiz-app
-   ```
-
-3. Open the `index.html` file in your web browser or integrate it into your website by copying the HTML, CSS, and JavaScript code into your project.
+2. Open the `index.html` file in your web browser or integrate it into your website by copying the HTML, CSS, and JavaScript code into your project.
 
 
 
