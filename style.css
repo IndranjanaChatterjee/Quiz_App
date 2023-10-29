@@ -13,7 +13,7 @@
 }
 body
 {
-    background-color: var(--body);
+    background: linear-gradient(#021456,#042497,var(--body)) ;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -26,10 +26,13 @@ h1
     text-align: center;
     padding: 1rem;
     width: 50%;
-    font-size: 5rem;
+    font-size: clamp(2rem, 2.5vw, 6rem); 
     border:2px solid var(--card);
     margin: 1rem;
     border-radius: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .quiz-box
 {
@@ -108,9 +111,10 @@ h1
     font-size: 2rem;
     color:var(--text);
     transition: all 0.2s ease-in-out;
-    border: none;
+    border: 1px solid var(--body);
     outline: none;
     display: none;
+    border-radius: 1rem;
 
 }
 #next-button:hover
@@ -124,5 +128,17 @@ h1
 {
     font-size: 2rem;
     text-align: center;
+    
+}
+@media (max-width:400px){
+    .quiz-box
+    {
+        margin: 1rem;
+    }
+    .quiz-box .question-answers .question
+    {
+        text-align: center;
+    }
+
     
 }
