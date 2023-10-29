@@ -53,14 +53,19 @@ const ques = document.getElementById("question");
 const ans = document.getElementById("answer");
 const next=document.getElementById("next-button");
 const count=document.getElementById("number");
+const play=document.getElementById("play-again");
+const show=document.getElementById("show-score");
 let score=0;
 let button;
 let index=0;
 const startquiz = () => {
   count.style.display="block";
   next.style.display="none";
+  show.style.display="none";
+  play.style.display="none";
   let get_question = questions[index];
   index = index + 1;
+  console.log(index);
   ques.innerHTML = get_question.question;
   count.innerHTML=`${index} out of 5 questions`;
   get_question.answers.forEach((answer) => {
@@ -91,10 +96,10 @@ const checkAnswer=(e)=>
     {
         check.classList.add("wrong");
     }
-    console.log("jil");
+    
     Array.from(ans.children).forEach((ele)=>
     {
-        console.log(ele);
+        
         if(ele.dataset.correct==="true")
         {
             ele.classList.add("correct");
@@ -111,9 +116,9 @@ const checkAnswer=(e)=>
     }
     else
     {
-        next.innerHTML="Show Score";
-        next.style.display="block";
-        next.addEventListener("click",showScore);
+        
+        show.style.display="block";
+        show.addEventListener("click",showScore);
     }
     
 
@@ -130,14 +135,15 @@ const showScore=()=>
 {
     reset();
     count.style.display="none";
+    show.style.display="none";
     ques.innerHTML=`Your score :`;
     
     ans.innerHTML=`Score - ${score}/5 ✌️✌️`
     ans.classList.add("style")
-    next.innerHTML="Play Again";
-    next.style.display="block";
     
-    next.addEventListener("click",playAgain);
+    play.style.display="block";
+    
+    play.addEventListener("click",playAgain);
 };
 const reset=()=>
 {
@@ -150,6 +156,7 @@ const reset=()=>
 const playAgain=()=>
 {
   index=0;
+  score=0;
   reset();
   startquiz();
 }

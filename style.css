@@ -102,7 +102,7 @@ h1
     background-color:rgb(243, 107, 107);
     color:var(--text);
 }
-#next-button
+#next-button,#play-again,#show-score
 {
     width: 15rem;
     text-align: center;
@@ -117,7 +117,7 @@ h1
     border-radius: 1rem;
 
 }
-#next-button:hover
+#next-button:hover,#play-again:hover,#show-score:hover
 {
     background-color: var(--text);
     color:var(--card);
