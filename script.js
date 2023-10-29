@@ -51,15 +51,18 @@ const questions = [
 ];
 const ques = document.getElementById("question");
 const ans = document.getElementById("answer");
-const next=document.getElementById("next-button")
+const next=document.getElementById("next-button");
+const count=document.getElementById("number");
 let score=0;
 let button;
 let index=0;
 const startquiz = () => {
+  count.style.display="block";
   next.style.display="none";
   let get_question = questions[index];
   index = index + 1;
   ques.innerHTML = get_question.question;
+  count.innerHTML=`${index} out of 5 questions`;
   get_question.answers.forEach((answer) => {
     button = document.createElement("button");
     button.innerHTML=answer.value;
@@ -126,10 +129,15 @@ const nextquestion=()=>
 const showScore=()=>
 {
     reset();
+    count.style.display="none";
     ques.innerHTML=`Your score :`;
     
-    ans.innerHTML=`Score - ${score}`
+    ans.innerHTML=`Score - ${score}/5 ✌️✌️`
     ans.classList.add("style")
+    next.innerHTML="Play Again";
+    next.style.display="block";
+    
+    next.addEventListener("click",playAgain);
 };
 const reset=()=>
 {
@@ -138,5 +146,11 @@ const reset=()=>
             ans.removeChild(ans.firstChild);
         }
 
+}
+const playAgain=()=>
+{
+  index=0;
+  reset();
+  startquiz();
 }
 startquiz();
