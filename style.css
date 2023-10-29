@@ -30,6 +30,7 @@ body
     border: none;
     border-radius: 1.5rem;
     padding: 1rem;
+    max-width: 50rem;
     
     
 }
@@ -47,7 +48,7 @@ body
     font-size: 2.5rem;
 
 }
-.quiz-box .question-answers .answer
+.quiz-box .question-answers #answer
 {
     display: flex;
     flex-direction: column;
@@ -74,6 +75,10 @@ body
     cursor: pointer;
 
 }
+.btn:disabled
+{
+    cursor: no-drop;
+}
 .correct{
     background-color:rgb(7, 240, 7);
     color:var(--text);
@@ -82,9 +87,9 @@ body
     background-color:rgb(243, 107, 107);
     color:var(--text);
 }
-.next-button
+#next-button
 {
-    width: 10rem;
+    width: 15rem;
     text-align: center;
     padding: 0.3rem;
     margin: 0.3rem;
@@ -96,10 +101,16 @@ body
     display: none;
 
 }
-.next-button:hover
+#next-button:hover
 {
     background-color: var(--text);
     color:var(--card);
     cursor: pointer;
 
+}
+.style
+{
+    font-size: 2rem;
+    text-align: center;
+    
 }
