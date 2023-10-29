@@ -14,11 +14,11 @@ Welcome to the Quiz App ! This repository contains a simple web-based quiz appli
 
 
 
-## Demo
+## Link
 
-You can see a live demo of the Quiz App by visiting the following link:
+You can see the Quiz App by visiting the following link:
 
-[Quiz App Demo](https://example.com/quiz-app-demo)
+[Quiz App Link](https://qquizzicalll.netlify.app/)
 
 ## Installation
 
