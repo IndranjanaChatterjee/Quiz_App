@@ -16,8 +16,20 @@ body
     background-color: var(--body);
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+h1
+{
+    color:var(--card);
+    text-align: center;
+    padding: 1rem;
+    width: 50%;
+    font-size: 5rem;
+    border:2px solid var(--card);
+    margin: 1rem;
+    border-radius: 3rem;
 }
 .quiz-box
 {
